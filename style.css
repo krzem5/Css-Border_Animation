@@ -1,0 +1,207 @@
+body{
+	background: #000;
+	margin: 0;
+	padding: 0;
+}
+body *{
+	user-select: none;
+	margin: 0;
+	padding: 0;
+}
+.square{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	transform: translate(-50%,-50%) rotate(0deg);
+	background: #111;
+	overflow: hidden;
+	border-radius: 10%;
+	box-shadow: 0 0 50px rgba(120,120,120,0.5);
+	animation: rotate 8s linear infinite;
+}
+.square>span:nth-child(4n+1){
+	transform: rotate(0deg);
+}
+.square>span:nth-child(4n+2){
+	transform: rotate(90deg);
+}
+.square>span:nth-child(4n+3){
+	transform: rotate(180deg);
+}
+.square>span:nth-child(4n+4){
+	transform: rotate(270deg);
+}
+.square>span:nth-child(8n+1):before{
+	animation: moveR 2s linear infinite;
+	animation-delay: 0s;
+}
+.square>span:nth-child(8n+2):before{
+	animation: moveR 2s linear infinite;
+	animation-delay: 0.5s;
+}
+.square>span:nth-child(8n+3):before{
+	animation: moveR 2s linear infinite;
+	animation-delay: 1s;
+}
+.square>span:nth-child(8n+4):before{
+	animation: moveR 2s linear infinite;
+	animation-delay: 1.5s;
+}
+.square>span:nth-child(8n+5):before{
+	animation: moveL 2s linear infinite;
+	animation-delay: 0s;
+}
+.square>span:nth-child(8n+6):before{
+	animation: moveL 2s linear infinite;
+	animation-delay: 1.5s;
+}
+.square>span:nth-child(8n+7):before{
+	animation: moveL 2s linear infinite;
+	animation-delay: 1s;
+}
+.square>span:nth-child(8n+8):before{
+	animation: moveL 2s linear infinite;
+	animation-delay: 0.5s;
+}
+.square>span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 5%;
+	display: block;
+	overflow: hidden;
+}
+.square>span:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-top: 10px solid #fff;
+	border-radius: 5%;
+	left: -100%;
+}
+@keyframes moveR{
+	0%{
+		left: -100%;
+	}
+	25%{
+		left: 0%;
+	}
+	50%,100%{
+		left: 100%;
+	}
+}
+@keyframes moveL{
+	0%{
+		left: 100%;
+	}
+	25%{
+		left: 0%;
+	}
+	50%,100%{
+		left: -100%;
+	}
+}
+@keyframes rotate{
+	0%{
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+	100%{
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+.square>span.l1{
+	width: 200px;
+	height: 200px;
+	top: 0;
+	left: 0;
+}
+.square>span.l1:before{
+	border-color: #f00
+}
+.square>span.l2{
+	width: 180px;
+	height: 180px;
+	top: 10px;
+	left: 10px;
+}
+.square>span.l2:before{
+	border-color: #f80
+}
+.square>span.l3{
+	width: 160px;
+	height: 160px;
+	top: 20px;
+	left: 20px;
+}
+.square>span.l3:before{
+	border-color: #ff0
+}
+.square>span.l4{
+	width: 140px;
+	height: 140px;
+	top: 30px;
+	left: 30px;
+}
+.square>span.l4:before{
+	border-color: #0c0
+}
+.square>span.l5{
+	width: 120px;
+	height: 120px;
+	top: 40px;
+	left: 40px;
+}
+.square>span.l5:before{
+	border-color: #0f0
+}
+.square>span.l6{
+	width: 100px;
+	height: 100px;
+	top: 50px;
+	left: 50px;
+}
+.square>span.l6:before{
+	border-color: #06c
+}
+.square>span.l7{
+	width: 80px;
+	height: 80px;
+	top: 60px;
+	left: 60px;
+}
+.square>span.l7:before{
+	border-color: #08f
+}
+.square>span.l8{
+	width: 60px;
+	height: 60px;
+	top: 70px;
+	left: 70px;
+}
+.square>span.l8:before{
+	border-color: #80f
+}
+.square>span.l9{
+	width: 40px;
+	height: 40px;
+	top: 80px;
+	left: 80px;
+}
+.square>span.l9:before{
+	border-color: #f0f
+}
+.square>span.l10{
+	width: 20px;
+	height: 20px;
+	top: 90px;
+	left: 90px;
+}
+.square>span.l10:before{
+	border-color: #f8f
+}
